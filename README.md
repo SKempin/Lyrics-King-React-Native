@@ -26,7 +26,7 @@ Scan the below QR code to open the project on Android:
 
 ## Adobe XD files
 
-Design files for the UI can be found in `_design_assets/adobeXD` in the project root.
+Design files for the UI can be found in `_design_assets/adobeXD` in the project root. UI design implemented with [flexbox](https://docs.expo.io/versions/latest/react-native/flexbox).
 
 ## Features
 
