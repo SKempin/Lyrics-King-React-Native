@@ -8,13 +8,12 @@ Built as a personal training project for [React Native](https://facebook.github.
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
-## Expo
+## [Expo Project Page](https://expo.io/@skempin/lyrics-king)
 
 This project has been built using [Expo](https://expo.io/). Please install `npm install expo-cli --global` to run this project locally.
 
 <!-- GIF example here  -->
 
-### [Expo Project Page](https://expo.io/@skempin/lyrics-king)
 
 Scan the below QR code to open the project on Android:
 
@@ -102,7 +101,8 @@ Other contributions and suggestions are always very welcome! [Contact me](https:
 ## Author
 
 [Stephen Kempin](https://www.stephenkempin.co.uk)
-[Project Github](https://github.com/SKempin/Lyrics-King-React-Native)
+
+[Lyrics King Project Github](https://github.com/SKempin/Lyrics-King-React-Native)
 
 ## Google Play Store
 
@@ -114,4 +114,4 @@ View my commercial apps on the [SK-UK Google Play Store](https://play.google.com
 
 [MIT](https://github.com/SKempin/reactjs-tmdb-app/blob/master/LICENCE)
 
-You are welcome to use this however you wish within the MIT license, but please retain [my credentials](https://www.stephenkempin.co.uk/) and links back to [this repo](https://github.com/SKempin/reactjs-tmdb-app).
+You are welcome to use this however you wish within the MIT license, but please retain [my credentials](https://www.stephenkempin.co.uk/) and links back to [this repo](https://github.com/SKempin/Lyrics-King-React-Native).
