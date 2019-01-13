@@ -19,7 +19,7 @@ This project has been built using [Expo](https://expo.io/). Please install `npm 
 [Lyrics King - Expo Page](https://expo.io/@skempin/lyrics-king)
 
 Scan the below QR code to open the project on Android:
-[[https://github.com/username/repository/blob/master/img/octocat.png|alt=octocat]]
+[[https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/qr.png]]
 
 ## App Preview
 
@@ -92,7 +92,7 @@ Design files for the UI can be found in `_design_assets/adobeXD` in the project 
 
 Due to time constraints there are several features that I haven’t been able to develop yet. If you would like to develop your React Native skills and contribute any of the features below this would be hugely beneficial!
 
-- [ ] [Debouncing or throttling](https://www.peterbe.com/plog/how-to-throttle-and-debounce-an-autocomplete-input-in-react) on search functionality
+- [ ] [Debouncing or throttling](https://www.peterbe.com/plog/how-to-throttle-and-debounce-an-autocomplete-input-in-react) on search functionality.
 - [ ] Adding clear search button functionality on Android. This functionality [already exists on iOS](https://facebook.github.io/react-native/docs/textinput#clearbuttonmode).
 - [ ] [Animations](https://docs.expo.io/versions/latest/react-native/animations) would be a nice touch! Fading in the details screen background image would be priority.
 - [ ] Any general performance improvements.
