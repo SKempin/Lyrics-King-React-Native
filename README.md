@@ -14,12 +14,12 @@ This project has been built using [Expo](https://expo.io/). Please install `npm 
 
 <!-- GIF example here  -->
 
-### Expo Project Page
-
-[Lyrics King - Expo Page](https://expo.io/@skempin/lyrics-king)
+### [Expo Project Page](https://expo.io/@skempin/lyrics-king)
 
 Scan the below QR code to open the project on Android:
-[https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/qr.png]
+
+![](https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/qr.png)
+
 
 ## App Preview
 
