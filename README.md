@@ -16,7 +16,7 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 
 This project has been built using [Expo](https://expo.io/). Please install `npm install expo-cli --global` to run this project locally.
 
-<!-- GIF example here  -->
+![](https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/video.gif)
 
 Scan the below QR code to open the project on Android:
 
