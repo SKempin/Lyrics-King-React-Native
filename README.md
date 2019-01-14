@@ -1,5 +1,6 @@
-# Lyrics King <img src="_github/lk-logo.gif" width="60">
+# Lyrics King <img src="_github/lk-logo.gif" width="80">
 
+![](https://img.shields.io/github/license/SKempin/Lyrics-King-React-Native.svg?style=flat-square)
 ![](https://img.shields.io/github/stars/SKempin/Lyrics-King-React-Native.svg?style=flat-square)
 ![](https://img.shields.io/github/forks/SKempin/Lyrics-King-React-Native.svg?style=flat-square)
 

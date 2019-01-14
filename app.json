@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Lyrics King",
-    "description": "Lyrics King is lyrics search app, fetching data from Deezer an Lyrics.ovh. Designed with Adobe XD and built with Expo, by Stephen Kempin. https://github.com/SKempin/Lyrics-King-React-Native",
+    "description": "Lyrics King is a lyrics search app, fetching data from Deezer an Lyrics.ovh. Designed with Adobe XD and built with Expo, by Stephen Kempin. https://github.com/SKempin/Lyrics-King-React-Native",
     "icon": "./assets/images/icon.png",
     "slug": "lyrics-king",
     "sdkVersion": "32.0.0",
