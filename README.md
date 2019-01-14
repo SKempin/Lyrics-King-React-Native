@@ -6,7 +6,9 @@
 
 A [React Native](https://facebook.github.io/react-native/) native app utilising [Expo](https://expo.io/), [React Navigation](https://reactnavigation.org) and fetching data from mutliple API's ([Deezer](https://developers.deezer.com/) and [Lyrics.OVH](https://www.lyrics.ovh)).
 
-![](https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/video.gif)
+<a href="https://expo.io/@skempin/lyrics-king">
+	<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/video.gif" >
+</a>
 
 Built as a personal training project for [React Native](https://facebook.github.io/react-native/). Designed in [Adobe XD](https://www.adobe.com/uk/products/xd.html). Design and development by [Stephen Kempin](https://www.stephenkempin.co.uk).
 
