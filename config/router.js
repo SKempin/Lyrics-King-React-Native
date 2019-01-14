@@ -1,22 +1,32 @@
-import React from 'react';
-import { createDrawerNavigator, createStackNavigator, DrawerItems } from 'react-navigation';
-import { Ionicons } from '@expo/vector-icons';
-import { StyleSheet, Image, ScrollView, SafeAreaView, View } from 'react-native';
+import React from "react";
+import {
+  createDrawerNavigator,
+  createStackNavigator,
+  DrawerItems
+} from "react-navigation";
+import { Ionicons } from "@expo/vector-icons";
+import {
+  StyleSheet,
+  Image,
+  ScrollView,
+  SafeAreaView,
+  View
+} from "react-native";
 
 //  Components
-import { SocialButton } from '../components/SocialButton';
+import { SocialButton } from "../components/SocialButton";
 //  Helper functions
-import handleShare from '../utils/shareHelper.js';
+import handleShare from "../utils/shareHelper.js";
 // Config
-import colours from './colours';
+import colours from "./colours";
 // Constants
-import { socialLinks } from '../lib/constants';
+import { socialLinks } from "../lib/constants";
 const { ...extra } = Expo.Constants.manifest.extra;
 
 //  Screens
-import SearchScreen from '../screens/SearchScreen';
-import DetailsScreen from '../screens/DetailsScreen';
-import AboutScreen from '../screens/AboutScreen';
+import SearchScreen from "../screens/SearchScreen";
+import DetailsScreen from "../screens/DetailsScreen";
+import AboutScreen from "../screens/AboutScreen";
 
 // Main stack
 export const MainStack = createStackNavigator({
@@ -41,11 +51,11 @@ export const MainStack = createStackNavigator({
     navigationOptions: ({ navigation }) => ({
       headerStyle: {
         borderBottomWidth: 0,
-        backgroundColor: 'rgba(0,0,0,0.2)',
+        backgroundColor: "rgba(0,0,0,0.2)",
         elevation: 0
       },
       headerTransparent: true,
-      headerTintColor: 'rgba(255,255,255,0.7)',
+      headerTintColor: "rgba(255,255,255,0.7)",
       headerRight: (
         <Ionicons
           name="md-share"
@@ -97,8 +107,14 @@ export const RootStack = createDrawerNavigator(
   {
     contentComponent: props => (
       <ScrollView style={{ backgroundColor: colours.primaryBlack }}>
-        <SafeAreaView style={styles.container} forceInset={{ top: 'always', horizontal: 'never' }}>
-          <Image style={styles.logo} source={require('../assets/images/lk-logo.png')} />
+        <SafeAreaView
+          style={styles.container}
+          forceInset={{ top: "always", horizontal: "never" }}
+        >
+          <Image
+            style={styles.logo}
+            source={require("../assets/images/lk-logo.png")}
+          />
 
           <DrawerItems
             {...props}
@@ -133,7 +149,7 @@ const styles = StyleSheet.create({
   logo: {
     width: 150,
     height: 150,
-    alignSelf: 'center',
+    alignSelf: "center",
     marginBottom: 30
   },
   itemStyle: {

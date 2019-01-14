@@ -13,11 +13,10 @@
     "ios"
   ],
   "devDependencies": {
-    "jest-expo": "^31.0.0",
-    "react-native-scripts": "1.14.0",
+    "jest-expo": "^32.0.0",
     "react-test-renderer": "16.3.1"
   },
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "main": "./node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "react-native-scripts start",
     "eject": "react-native-scripts eject",
@@ -29,12 +28,12 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "expo": "^31.0.4",
+    "expo": "^32.0.0",
     "expo-analytics": "^1.0.7",
     "format-duration": "^1.3.1",
     "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.1.tar.gz",
-    "react-navigation": "^2.18.2",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-navigation": "^3.0.9",
     "rn-placeholder": "^1.3.0",
     "sentry-expo": "^1.11.0"
   }
