@@ -34,11 +34,7 @@ Scan the below QR code to open the project on Android:
 
 ### Details Screen
 
-<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-foo.jpg" width="250">
-
-<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-above.jpg" width="250">
-
-<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-ariana.jpg" width="250">
+<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-foo.jpg" width="250" hspace="5"><img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-above.jpg" width="250" hspace="5"><img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-ariana.jpg" width="250" hspace="5">
 
 ### About Screen
 
