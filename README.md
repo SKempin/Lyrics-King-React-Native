@@ -10,7 +10,7 @@ A [React Native](https://facebook.github.io/react-native/) native app utilising 
 	<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/video.gif" width="350" >
 </a>
 
-<br><br>
+<br>
 
 Built as a personal training project for [React Native](https://facebook.github.io/react-native/). Designed in [Adobe XD](https://www.adobe.com/uk/products/xd.html). Design and development by [Stephen Kempin](https://www.stephenkempin.co.uk).
 
