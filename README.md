@@ -28,11 +28,21 @@ Scan the below QR code to open the project on Android:
 
 ## App Preview
 
-### Search
+### Search Screen
 
-<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/search.jpg" width="400">
+<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/search.jpg" width="300">
 
-<!-- static screenshots here  -->
+### Details Screen
+
+<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-ariana.jpg" width="300">
+
+<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-foo.jpg" width="300">
+
+<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-dua.jpg" width="300">
+
+### About Screen
+
+<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/about.jpg" width="300">
 
 ## Adobe XD files
 
