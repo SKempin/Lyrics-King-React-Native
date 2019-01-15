@@ -28,7 +28,9 @@ Scan the below QR code to open the project on Android:
 
 ## App Preview
 
-![](https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/search.jpg)
+### Search
+
+<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/search.jpg" width="400">
 
 <!-- static screenshots here  -->
 
