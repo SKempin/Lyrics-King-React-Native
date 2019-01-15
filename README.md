@@ -7,12 +7,16 @@
 A [React Native](https://facebook.github.io/react-native/) native app utilising [Expo](https://expo.io/), [React Navigation](https://reactnavigation.org) and fetching data from mutliple API's ([Deezer](https://developers.deezer.com/) and [Lyrics.OVH](https://www.lyrics.ovh)).
 
 <a href="https://expo.io/@skempin/lyrics-king">
-	<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/video.gif" >
+	<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/video.gif" >
 </a>
+
+<br>
 
 Built as a personal training project for [React Native](https://facebook.github.io/react-native/). Designed in [Adobe XD](https://www.adobe.com/uk/products/xd.html). Design and development by [Stephen Kempin](https://www.stephenkempin.co.uk).
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
+
+<br>
 
 ## [Expo Project Page](https://expo.io/@skempin/lyrics-king)
 
@@ -23,6 +27,8 @@ Scan the below QR code to open the project on Android:
 ![](https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/qr.png)
 
 ## App Preview
+
+![](https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/Search.jpg)
 
 <!-- static screenshots here  -->
 
@@ -114,6 +120,6 @@ View my commercial apps on the [SK-UK Google Play Store](https://play.google.com
 
 ## License
 
-[MIT](https://github.com/SKempin/reactjs-tmdb-app/blob/master/LICENCE)
+[MIT](https://github.com/SKempin/Lyrics-King-React-Native/blob/master/LICENSE)
 
 You are welcome to use this however you wish within the MIT license, but please retain [my credentials](https://www.stephenkempin.co.uk/) and links back to [this repo](https://github.com/SKempin/Lyrics-King-React-Native).
