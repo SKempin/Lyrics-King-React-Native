@@ -4,7 +4,7 @@
 ![](https://img.shields.io/github/stars/SKempin/Lyrics-King-React-Native.svg?style=flat-square)
 ![](https://img.shields.io/github/forks/SKempin/Lyrics-King-React-Native.svg?style=flat-square)
 
-A [React Native](https://facebook.github.io/react-native/) native app utilising [Expo](https://expo.io/), [React Navigation](https://reactnavigation.org) and fetching data from mutliple API's ([Deezer](https://developers.deezer.com/) and [Lyrics.OVH](https://www.lyrics.ovh)).
+A [React Native](https://facebook.github.io/react-native/) native app utilising [Expo](https://expo.io/), [React Navigation](https://reactnavigation.org) and fetching data from mutliple API's ([Deezer](https://developers.deezer.com/) and [Lyrics.OVH](https://www.lyrics.ovh)). UI built with [Adobe XD](https://www.adobe.com/uk/products/xd.html).
 <br><br>
 <a href="https://expo.io/@skempin/lyrics-king">
 	<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/video.gif" width="350" >
@@ -127,6 +127,12 @@ Other contributions and suggestions are always very welcome! [Contact me](https:
 View my commercial apps on the [SK-UK Google Play Store](https://play.google.com/store/apps/developer?id=SK+-+UK)
 
 ![SK-UK Play Store](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)
+
+## Donate :coffee:
+
+If you like this project and wish to say to say thanks - I'm always open to a coffee!
+
+<a href="https://www.buymeacoffee.com/oru9CZh" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/black_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 ## License
 
