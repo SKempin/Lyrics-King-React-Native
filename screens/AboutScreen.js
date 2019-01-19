@@ -45,6 +45,14 @@ export default class AboutScreen extends React.Component {
             <Text style={styles.headingText}>Share</Text>
             <SocialButton icon="share" label="Share" screen="About" />
 
+            <Text style={styles.headingText}>Donate</Text>
+            <SocialButton
+              icon="heart"
+              label="Buy me a coffee to say thanks!"
+              url="https://www.buymeacoffee.com/oru9CZh"
+              screen="About Screen"
+            />
+
             <Text style={styles.headingText}>App Info</Text>
             <Image style={styles.logo} source={require('../assets/images/lk-logo.png')} />
             <View style={styles.detailsContainer}>
