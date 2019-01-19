@@ -1,6 +1,6 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
-.DS_Store
+/*.DS_Store
 
 # expo
 .expo/
