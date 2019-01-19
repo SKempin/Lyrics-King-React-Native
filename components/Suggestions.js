@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     flex: 0
   },
   detailsContainer: {
-    width: 160,
+    width: 145,
     marginRight: 20
   },
   songTitle: {
