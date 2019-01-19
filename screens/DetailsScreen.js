@@ -145,8 +145,9 @@ const styles = StyleSheet.create({
   artistHeading: {
     color: colours.primaryWhite,
     fontSize: 35,
+    lineHeight: 35,
     fontWeight: '300',
-    paddingBottom: 2,
+    paddingBottom: 7,
     shadowOpacity: 0.6,
     shadowRadius: 3,
     shadowOffset: {
@@ -157,7 +158,10 @@ const styles = StyleSheet.create({
   songHeading: {
     color: colours.primaryWhite,
     fontSize: 45,
+    lineHeight: 45,
+
     fontWeight: 'bold',
+    paddingBottom: 0,
     shadowOpacity: 0.6,
     shadowRadius: 3,
     shadowOffset: {
