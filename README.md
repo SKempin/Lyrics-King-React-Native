@@ -6,19 +6,32 @@
 
 A [React Native](https://facebook.github.io/react-native/) native app utilising [Expo](https://expo.io/), [React Navigation](https://reactnavigation.org) and fetching data from mutliple API's ([Deezer](https://developers.deezer.com/) and [Lyrics.OVH](https://www.lyrics.ovh)). UI built with [Adobe XD](https://www.adobe.com/uk/products/xd.html).
 <br><br>
+Built as a personal training project for [React Native](https://facebook.github.io/react-native/). Designed in [Adobe XD](https://www.adobe.com/uk/products/xd.html). Design and development by [Stephen Kempin](https://www.stephenkempin.co.uk). This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
+<br><br>
 <img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/header.jpg" width="900" >
 
 <a href="https://expo.io/@skempin/lyrics-king">
 	<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/video.gif" width="350" >
 </a>
 
-<br>
+## App Preview
 
-Built as a personal training project for [React Native](https://facebook.github.io/react-native/). Designed in [Adobe XD](https://www.adobe.com/uk/products/xd.html). Design and development by [Stephen Kempin](https://www.stephenkempin.co.uk).
+### Search Screen
 
-This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
+<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/search.jpg" width="270">
+<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/suggestions.jpg" width="270">
 
-<br>
+### Details Screen
+
+<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-arian.jpg" width="270" hspace="5"><img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-above.jpg" width="270" hspace="5"><img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-dua.jpg" width="270" hspace="5">
+
+### About Screen
+
+<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/about.jpg" width="270">
+
+### Navigation (Drawer)
+
+<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/navigation.jpg" width="270">
 
 ## [Expo Project Page](https://expo.io/@skempin/lyrics-king)
 
@@ -29,20 +42,6 @@ Scan the below QR code to open the project on Android:
 ![](https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/qr.png)
 
 <br>
-
-## App Preview
-
-### Search Screen
-
-<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/search.jpg" width="300">
-
-### Details Screen
-
-<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-foo.jpg" width="270" hspace="5"><img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-above.jpg" width="270" hspace="5"><img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-ariana.jpg" width="270" hspace="5">
-
-### About Screen
-
-<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/about.jpg" width="300">
 
 ## Adobe XD files
 
