@@ -12,7 +12,7 @@ Built as a personal training project for [React Native](https://facebook.github.
 ## [Expo Link](https://expo.io/@skempin/lyrics-king)
 
 <br><br>
-<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/header.jpg" width="900" >
+<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/header-overview.jpg" width="900"  alt="Lyrics King - React Native Expo app">
 
 <a href="https://expo.io/@skempin/lyrics-king">
 	<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/video.gif" width="350" >
@@ -130,7 +130,7 @@ Other contributions and suggestions are always very welcome! [Contact me](https:
 
 View my commercial apps on the [SK-UK Google Play Store](https://play.google.com/store/apps/developer?id=SK+-+UK)
 
-<a href='https://play.google.com/store/apps/developer?id=SK+-+UK&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='SK-UK Google Play Store' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width='180px'></a>
+<a href='https://play.google.com/store/apps/developer?id=SK+-+UK&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='SK-UK Google Play Store' src='https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/google-play.jpg' width='180px'></a>
 
 ## Donate :coffee:
 
