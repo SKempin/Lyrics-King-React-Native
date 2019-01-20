@@ -10,7 +10,6 @@ Built as a personal training project for [React Native](https://facebook.github.
 
 ### [Expo Demo Link](https://expo.io/@skempin/lyrics-king)
 
-<br><br>
 <img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/header-overview.jpg" width="900"  alt="Lyrics King - React Native Expo app">
 
 ## App Preview
