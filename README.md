@@ -8,6 +8,8 @@ A [React Native](https://facebook.github.io/react-native/) native app utilising 
 <br><br>
 Built as a personal training project for [React Native](https://facebook.github.io/react-native/). Designed in [Adobe XD](https://www.adobe.com/uk/products/xd.html). Design and development by [Stephen Kempin](https://www.stephenkempin.co.uk). This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 <br><br>
+**[Expo Link](https://expo.io/@skempin/lyrics-king)**
+<br><br>
 <img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/header.jpg" width="900" >
 
 <a href="https://expo.io/@skempin/lyrics-king">
