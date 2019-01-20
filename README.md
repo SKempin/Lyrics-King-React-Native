@@ -7,14 +7,15 @@
 A [React Native](https://facebook.github.io/react-native/) native app utilising [Expo](https://expo.io/), [React Navigation](https://reactnavigation.org) and fetching data from mutliple API's ([Deezer](https://developers.deezer.com/) and [Lyrics.OVH](https://www.lyrics.ovh)). UI built with [Adobe XD](https://www.adobe.com/uk/products/xd.html).
 <br><br>
 Built as a personal training project for [React Native](https://facebook.github.io/react-native/). Designed in [Adobe XD](https://www.adobe.com/uk/products/xd.html). Design and development by [Stephen Kempin](https://www.stephenkempin.co.uk). This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
-<br><br>
 
-### [Expo Link](https://expo.io/@skempin/lyrics-king)
+### [Expo Demo Link](https://expo.io/@skempin/lyrics-king)
 
 <br><br>
 <img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/header-overview.jpg" width="900"  alt="Lyrics King - React Native Expo app">
 
 ## App Preview
+
+### Video Preview
 
 <a href="https://expo.io/@skempin/lyrics-king">
 	<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/video.gif" width="350" >
@@ -50,7 +51,7 @@ Scan the below QR code to open the project on Android:
 
 Design files for the UI can be found in `_design_assets/adobeXD` in the project root. UI design implemented with [flexbox](https://docs.expo.io/versions/latest/react-native/flexbox).
 
-## Features
+## App Features
 
 ### Screens
 
