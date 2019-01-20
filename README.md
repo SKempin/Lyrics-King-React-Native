@@ -22,8 +22,7 @@ Built as a personal training project for [React Native](https://facebook.github.
 
 ### Search Screen
 
-<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/search.jpg" width="270" alt="Lyrics King - Search screen" hspace="5">
-<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/suggestions.jpg" width="270" alt="Lyrics King - Suggestions on search screen">
+<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/search.jpg" width="270" alt="Lyrics King - Search screen" hspace="5"><img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/suggestions.jpg" width="270" alt="Lyrics King - Suggestions on search screen">
 
 ### Details Screen
 
