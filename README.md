@@ -8,7 +8,9 @@ A [React Native](https://facebook.github.io/react-native/) native app utilising 
 <br><br>
 Built as a personal training project for [React Native](https://facebook.github.io/react-native/). Designed in [Adobe XD](https://www.adobe.com/uk/products/xd.html). Design and development by [Stephen Kempin](https://www.stephenkempin.co.uk). This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 <br><br>
-**[Expo Link](https://expo.io/@skempin/lyrics-king)**
+
+## [Expo Link](https://expo.io/@skempin/lyrics-king)
+
 <br><br>
 <img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/header.jpg" width="900" >
 
@@ -20,20 +22,20 @@ Built as a personal training project for [React Native](https://facebook.github.
 
 ### Search Screen
 
-<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/search.jpg" width="270">
-<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/suggestions.jpg" width="270">
+<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/search.jpg" width="270" alt="Lyrics King - Search screen" hspace="5">
+<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/suggestions.jpg" width="270" alt="Lyrics King - Suggestions on search screen">
 
 ### Details Screen
 
-<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-ariana.jpg" width="270" hspace="5"><img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-above.jpg" width="270" hspace="5"><img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-dua.jpg" width="270" hspace="5">
+<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-ariana.jpg" width="270" hspace="5" alt="Lyrics King - Details screen, Ariana Grande"><img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-above.jpg" width="270" hspace="5" alt="Lyrics King - Details screen, Above and Beyond"><img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/details-dua.jpg" width="270"  alt="Lyrics King - Details screen, Dua Lipa">
 
 ### About Screen
 
-<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/about.jpg" width="270">
+<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/about.jpg" width="270" alt="Lyrics King - About screen">
 
 ### Navigation (Drawer)
 
-<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/navigation.jpg" width="270">
+<img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/screenshots/navigation.jpg" width="270" alt="Lyrics King - Navigation drawer">
 
 ## [Expo Project Page](https://expo.io/@skempin/lyrics-king)
 
@@ -129,13 +131,13 @@ Other contributions and suggestions are always very welcome! [Contact me](https:
 
 View my commercial apps on the [SK-UK Google Play Store](https://play.google.com/store/apps/developer?id=SK+-+UK)
 
-![SK-UK Play Store](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)
+<a href='https://play.google.com/store/apps/developer?id=SK+-+UK&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='SK-UK Google Play Store' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width='180px'></a>
 
 ## Donate :coffee:
 
 If you like this project and wish to say to say thanks - I'm always open to a coffee!
 
-<a href="https://www.buymeacoffee.com/oru9CZh" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/black_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+<a href="https://www.buymeacoffee.com/oru9CZh" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/black_img.png" alt="Buy Me A Coffee" width='180px' ></a>
 
 ## License
 
