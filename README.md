@@ -17,7 +17,7 @@ Built as a personal training project for [React Native](https://facebook.github.
 - [App Preview](#app-preview)
 - [Expo Project Page](#expo-project-page)
 - [Adobe XD](#adobe-xd-files)
-- [App Feature](#app-features)
+- [App Features](#app-features)
 - [Getting Started](#getting-started)
 - [What's Included](#whats-included)
 - [API's](#apis-used)
