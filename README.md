@@ -12,6 +12,22 @@ Built as a personal training project for [React Native](https://facebook.github.
 
 <img src="https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/header-overview.jpg" width="900"  alt="Lyrics King - React Native Expo app">
 
+## Contents
+
+- [App Preview](#app-preview)
+- [Expo Project Page](#expo-project-page)
+- [Adobe XD](#adobe-xd-files)
+- [App Feature](#app-features)
+- [Getting Started](#getting-started)
+- [What's Included](#whats-included)
+- [API's](#apis-used)
+- [Contributing](#contributing)
+- [Author](#author)
+- [Google Play Store](#google-play-store)
+- [Donate](#donate)
+- [License](#license)
+
+
 ## App Preview
 
 ### Video Preview
@@ -109,9 +125,9 @@ Design files for the UI can be found in `_design_assets/adobeXD` in the project 
 - [Deezer](https://developers.deezer.com/)
 - [Lyrics.OVH](https://api.lyrics.ovh)
 
-## Contributing :tada:
+## Contributing
 
-Due to time constraints there are several features that I haven’t been able to develop yet. If you would like to develop your React Native skills and contribute any of the features below this would be hugely beneficial!
+Due to time constraints there are several features that I haven’t been able to develop yet. If you would like to develop your React Native skills and contribute any of the features below this would be hugely beneficial! :tada:
 
 - [ ] [Debouncing or throttling](https://www.peterbe.com/plog/how-to-throttle-and-debounce-an-autocomplete-input-in-react) on search functionality.
 - [ ] Adding clear search button functionality on Android. This functionality [already exists on iOS](https://facebook.github.io/react-native/docs/textinput#clearbuttonmode).
@@ -132,9 +148,9 @@ View my commercial apps on the [SK-UK Google Play Store](https://play.google.com
 
 <a href='https://play.google.com/store/apps/developer?id=SK+-+UK&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='SK-UK Google Play Store' src='https://github.com/SKempin/Lyrics-King-React-Native/blob/master/_github/google-play.jpg' width='180px'></a>
 
-## Donate :coffee:
+## Donate
 
-If you like this project and wish to say to say thanks - I'm always open to a coffee!
+If you like this project and wish to say to say thanks - I'm always open to a coffee!  :coffee:
 
 <a href="https://www.buymeacoffee.com/oru9CZh" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/black_img.png" alt="Buy Me A Coffee" width='180px' ></a>
 
