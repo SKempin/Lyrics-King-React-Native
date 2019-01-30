@@ -12,6 +12,7 @@ import {
 import { AppLoading, Asset, Amplitude } from "expo";
 import { EvilIcons } from "@expo/vector-icons";
 import { Analytics, ScreenHit } from "expo-analytics";
+import { throttle } from "throttle-debounce";
 
 // Config
 import colours from "../config/colours";
@@ -38,6 +39,7 @@ export default class SearchScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = { results: [], text: null, showLogo: true };
+    this.throttleSearch = throttle(1000, this.getInfo);
   }
 
   componentDidMount() {
@@ -49,7 +51,7 @@ export default class SearchScreen extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     if (this.state.text !== prevState.text) {
       if (this.state.text.length >= 1) {
-        this.getInfo();
+        this.throttleSearch(this.state.text);
       } else {
         this.submitAndClear();
       }
