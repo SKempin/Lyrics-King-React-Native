@@ -12,7 +12,7 @@ import {
 import { AppLoading, Asset, Amplitude } from "expo";
 import { EvilIcons } from "@expo/vector-icons";
 import { Analytics, ScreenHit } from "expo-analytics";
-import { throttle } from "throttle-debounce";
+import { throttle, debounce } from "throttle-debounce";
 
 // Config
 import colours from "../config/colours";
@@ -39,8 +39,11 @@ export default class SearchScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = { results: [], text: null, showLogo: true };
-    this.throttleSearch = throttle(1000, this.getInfo);
+    this.throttleSearch = throttle(500, this.getInfo);
+    this.debounceSearch = throttle(1000, this.getInfo);
   }
+
+  _autocompleteCache = {};
 
   componentDidMount() {
     Amplitude.initialize("6460727d017e832e2083e13916c7c9e5");
@@ -51,7 +54,9 @@ export default class SearchScreen extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     if (this.state.text !== prevState.text) {
       if (this.state.text.length >= 1) {
-        this.throttleSearch(this.state.text);
+        const text = this.state.text;
+        if (text.length < 5) this.throttleSearch(this.state.text);
+        else this.debounceSearch(this.state.text);
       } else {
         this.submitAndClear();
       }
@@ -69,12 +74,22 @@ export default class SearchScreen extends React.Component {
 
   // Throttling and debouncing needed
   getInfo = () => {
+    //console.log(this.state.text);
     let url = `https://api.deezer.com/search?q=track:"${
       this.state.text
     }"&limit=20&order=RANKING?strict=on`;
+
+    const cached = this._autocompleteCache[url];
+    if (cached) {
+      return Promise.resolve(cached).then(results => {
+        this.setState({ results: data.data, showLogo: false });
+      });
+    }
+
     fetch(url)
       .then(response => response.json())
       .then(data => {
+        this._autocompleteCache[url] = data;
         this.setState({ results: data.data, showLogo: false });
       });
   };
