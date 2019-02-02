@@ -55,12 +55,13 @@ const SocialButton = ({
 SocialButton.propTypes = {
   icon: PropTypes.string,
   label: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  url: PropTypes.string,
   screen: PropTypes.string.isRequired,
 };
 
 SocialButton.defaultProps = {
   icon: '',
+  url: '',
 };
 
 export default SocialButton;

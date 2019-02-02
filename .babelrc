@@ -1,34 +1,11 @@
 {
-  "env": {
-    "development": {
-      "presets": ["react-native"],
-      "plugins": [
-        [
-          "@babel/plugin-proposal-decorators",
-          {
-            "legacy": true
-          }
-        ],
-        [
-          "@babel/plugin-transform-runtime",
-          {
-            "polyfill": false,
-            "regenerator": false
-          }
-        ],
-        ["jest-hoist"]
-      ]
-    },
-    "production": {
-      "presets": ["react-native"],
-      "plugins": [
-        [
-          "@babel/plugin-proposal-decorators",
-          {
-            "legacy": true
-          }
-        ]
-      ]
-    }
-  }
+  "presets": ["module:metro-react-native-babel-preset"],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ]
+  ]
 }

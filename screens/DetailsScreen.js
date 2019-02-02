@@ -37,9 +37,7 @@ export default class DetailsScreen extends React.Component {
     const {
       navigation: {
         state: {
-          param: {
-            artist: { title, artist },
-          },
+          params: { title, artist },
         },
       },
     } = this.props;
@@ -64,7 +62,7 @@ export default class DetailsScreen extends React.Component {
 
   displayLyrics() {
     const { lyrics, isReady } = this.state;
-    if (lyrics) {
+    if (!lyrics) {
       return (
         <Text style={{ color: colours.primaryWhite }}>
           Sorry, no lyrics can be found for this song.
@@ -91,10 +89,8 @@ export default class DetailsScreen extends React.Component {
     const {
       navigation: {
         state: {
-          param: {
-            artist: {
-              title, artist, album, duration,
-            },
+          params: {
+            title, artist, album, duration,
           },
         },
       },
