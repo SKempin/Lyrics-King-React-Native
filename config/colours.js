@@ -7,6 +7,6 @@ const colours = {
   primaryWhite: '#fff',
   primaryTeal: '#07CCBA',
   primaryGrey: '#AAAAAA',
-  secondaryGrey: '#3E3E3E'
+  secondaryGrey: '#3E3E3E',
 };
 export default colours;

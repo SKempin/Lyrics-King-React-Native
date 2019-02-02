@@ -1,6 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, Image, View, ScrollView, ImageBackground } from 'react-native';
-import { Amplitude, LinearGradient } from 'expo';
+import {
+  StyleSheet,
+  Text,
+  Image,
+  View,
+  ScrollView,
+  ImageBackground,
+} from 'react-native';
+import * as Expo from 'expo';
+import PropTypes from 'prop-types';
 import format from 'format-duration';
 import Placeholder from 'rn-placeholder';
 import { Analytics, ScreenHit } from 'expo-analytics';
@@ -14,71 +22,92 @@ const ID = Expo.Constants.manifest.extra.googleAnalytics;
 const analytics = new Analytics(ID);
 
 export default class DetailsScreen extends React.Component {
+  static get propTypes() {
+    return {
+      navigation: PropTypes.object.isRequired,
+    };
+  }
+
   constructor(props) {
     super(props);
-    this.state = { lyrics: null, err: null, isReady: null };
+    this.state = { lyrics: null, /* err: null, */ isReady: null };
   }
 
   async componentDidMount() {
-    Amplitude.logEvent(
-      `SCREEN - Details: ${this.props.navigation.state.params.title} by ${
-        this.props.navigation.state.params.artist.name
-      }`
-    );
+    const {
+      navigation: {
+        state: {
+          param: {
+            artist: { title, artist },
+          },
+        },
+      },
+    } = this.props;
+    Expo.Amplitude.logEvent(`SCREEN - Details: ${title} by ${artist.name}`);
     analytics.hit(
-      new ScreenHit(
-        `SCREEN - Details: ${this.props.navigation.state.params.title} by ${
-          this.props.navigation.state.params.artist.name
-        }`
-      )
+      new ScreenHit(`SCREEN - Details: ${title} by ${artist.name}`),
     );
-    const { title, artist } = await this.props.navigation.state.params;
-    const lyricsQuery = artist.name + '/' + title;
+
+    const lyricsQuery = `${artist.name}/${title}`;
     this.getLyrics(lyricsQuery);
   }
 
-  getLyrics = async lyricsQuery => {
+  getLyrics = async (lyricsQuery) => {
     try {
       const res = await fetch(`https://api.lyrics.ovh/v1/${lyricsQuery}`);
       const response = await res.json();
       this.setState({ lyrics: response.lyrics, isReady: true });
     } catch (e) {
-      this.setState({ err: e.message });
+      console.log(e); // this.setState({ err: e.message });
     }
   };
 
   displayLyrics() {
-    if (this.state.lyrics === undefined || '' || null) {
+    const { lyrics, isReady } = this.state;
+    if (lyrics) {
       return (
         <Text style={{ color: colours.primaryWhite }}>
           Sorry, no lyrics can be found for this song.
         </Text>
       );
-    } else {
-      return (
-        <Placeholder.Paragraph
-          lineNumber={4}
-          textSize={12}
-          lineSpacing={7}
-          color="#242424"
-          width="60%"
-          lastLineWidth="80%"
-          firstLineWidth="30%"
-          onReady={this.state.isReady}>
-          <Text style={styles.lyrics}>{this.state.lyrics}</Text>
-        </Placeholder.Paragraph>
-      );
     }
+    return (
+      <Placeholder.Paragraph
+        lineNumber={4}
+        textSize={12}
+        lineSpacing={7}
+        color="#242424"
+        width="60%"
+        lastLineWidth="80%"
+        firstLineWidth="30%"
+        onReady={isReady}
+      >
+        <Text style={styles.lyrics}>{lyrics}</Text>
+      </Placeholder.Paragraph>
+    );
   }
 
   render() {
-    const { title, artist, album, duration } = this.props.navigation.state.params;
+    const {
+      navigation: {
+        state: {
+          param: {
+            artist: {
+              title, artist, album, duration,
+            },
+          },
+        },
+      },
+    } = this.props;
 
     return (
       <ScrollView style={styles.container}>
         <View style={{ flex: 1 }}>
-          <ImageBackground source={{ uri: artist.picture_xl }} style={styles.backgroundImage}>
-            <LinearGradient
+          <ImageBackground
+            source={{ uri: artist.picture_xl }}
+            style={styles.backgroundImage}
+          >
+            <Expo.LinearGradient
               colors={['transparent', colours.primaryBlack]}
               locations={[0.4, 1.2]}
               style={styles.gradient}
@@ -88,8 +117,9 @@ export default class DetailsScreen extends React.Component {
                 flexDirection: 'column',
                 alignSelf: 'flex-end',
                 paddingBottom: 40,
-                paddingLeft: 19
-              }}>
+                paddingLeft: 19,
+              }}
+            >
               <Text style={styles.artistHeading}>{artist.name}</Text>
               <Text style={styles.songHeading}>{title}</Text>
             </View>
@@ -101,16 +131,21 @@ export default class DetailsScreen extends React.Component {
               flex: 1,
               flexDirection: 'row',
               justifyContent: 'flex-start',
-              marginBottom: 30
-            }}>
-            <Image style={styles.albumImage} source={{ uri: album.cover_medium }} />
+              marginBottom: 30,
+            }}
+          >
+            <Image
+              style={styles.albumImage}
+              source={{ uri: album.cover_medium }}
+            />
             <View
               style={{
                 flexDirection: 'column',
                 flex: 1,
                 alignSelf: 'center',
-                paddingRight: 10
-              }}>
+                paddingRight: 10,
+              }}
+            >
               <Text style={styles.detailsHeading}>Album</Text>
               <Text style={styles.details}>{album.title}</Text>
               <Text style={styles.detailsHeading}>Duration</Text>
@@ -131,7 +166,7 @@ export default class DetailsScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colours.primaryBlack,
-    flex: 1
+    flex: 1,
   },
   backgroundImage: { flex: 1, minHeight: 360, flexDirection: 'row' },
   gradient: {
@@ -140,7 +175,7 @@ const styles = StyleSheet.create({
     top: 0,
     bottom: 0,
     left: 0,
-    right: 0
+    right: 0,
   },
   artistHeading: {
     color: colours.primaryWhite,
@@ -152,8 +187,8 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
     shadowOffset: {
       height: 0,
-      width: 0
-    }
+      width: 0,
+    },
   },
   songHeading: {
     color: colours.primaryWhite,
@@ -166,8 +201,8 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
     shadowOffset: {
       height: 0,
-      width: 0
-    }
+      width: 0,
+    },
   },
   albumImage: {
     width: 130,
@@ -175,24 +210,24 @@ const styles = StyleSheet.create({
     borderRadius: 130 / 2,
     borderWidth: 3,
     borderColor: colours.primaryWhite,
-    marginRight: 25
+    marginRight: 25,
   },
   detailsHeading: { color: colours.primaryGrey, marginBottom: 3 },
   details: {
     color: colours.primaryWhite,
     fontWeight: 'bold',
     marginBottom: 15,
-    fontSize: 16
+    fontSize: 16,
   },
   lyrics: {
     color: colours.primaryWhite,
     lineHeight: 22,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   creditsContainer: {
     flex: 1,
     alignSelf: 'center',
     paddingTop: 40,
-    paddingBottom: 30
-  }
+    paddingBottom: 30,
+  },
 });

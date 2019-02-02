@@ -1,5 +1,5 @@
 import { Share } from 'react-native';
-import { Amplitude } from 'expo';
+import * as Expo from 'expo';
 import { Analytics, Event } from 'expo-analytics';
 
 // GA tracking
@@ -9,17 +9,17 @@ const analytics = new Analytics(ID);
 const handleShare = (message, url, title, screen) => {
   Share.share(
     {
-      message: message,
-      url: url,
-      title: title
+      message,
+      url,
+      title,
     },
     {
       // Android only:
-      dialogTitle: `Share ` + title, // iOS only:
-      excludedActivityTypes: ['com.apple.UIKit.activity.PostToTwitter']
-    }
+      dialogTitle: `Share ${title}`, // iOS only:
+      excludedActivityTypes: ['com.apple.UIKit.activity.PostToTwitter'],
+    },
   ).then(() => {
-    Amplitude.logEvent(`BUTTON: Share - ${screen} Screen`);
+    Expo.Amplitude.logEvent(`BUTTON: Share - ${screen} Screen`);
     analytics.event(new Event('Button', 'Tap', `Share - ${screen} Screen`));
   });
 };
