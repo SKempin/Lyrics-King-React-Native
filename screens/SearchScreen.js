@@ -54,9 +54,8 @@ export default class SearchScreen extends React.Component {
     const { text } = this.state;
     if (text !== prevState.text) {
       if (text.length >= 1) {
-        if (text.length < 5 || text.endsWith(" "))
-          this.throttleSearch(this.state.text);
-        else this.debounceSearch(this.state.text);
+        if (text.length < 5 || text.endsWith(" ")) this.throttleSearch(text);
+        else this.debounceSearch(text);
       } else {
         this.submitAndClear();
       }
