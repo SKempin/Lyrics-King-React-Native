@@ -29,6 +29,7 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
+    "lint": "./node_modules/.bin/eslint .",
     "test": "jest"
   },
   "jest": {
