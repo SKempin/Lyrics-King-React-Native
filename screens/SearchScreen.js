@@ -40,10 +40,9 @@ export default class SearchScreen extends React.Component {
     super(props);
     this.state = { results: [], text: null, showLogo: true };
     this.throttleSearch = throttle(500, this.getInfo);
-    this.debounceSearch = throttle(1000, this.getInfo);
+    this.debounceSearch = debounce(1000, this.getInfo);
+    this._autocompleteCache = {};
   }
-
-  _autocompleteCache = {};
 
   componentDidMount() {
     Amplitude.initialize("6460727d017e832e2083e13916c7c9e5");
@@ -52,10 +51,11 @@ export default class SearchScreen extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (this.state.text !== prevState.text) {
-      if (this.state.text.length >= 1) {
-        const text = this.state.text;
-        if (text.length < 5) this.throttleSearch(this.state.text);
+    const { text } = this.state;
+    if (text !== prevState.text) {
+      if (text.length >= 1) {
+        if (text.length < 5 || text.endsWith(" "))
+          this.throttleSearch(this.state.text);
         else this.debounceSearch(this.state.text);
       } else {
         this.submitAndClear();
@@ -72,24 +72,21 @@ export default class SearchScreen extends React.Component {
     await Promise.all([...imageAssets]);
   }
 
-  // Throttling and debouncing needed
   getInfo = () => {
-    //console.log(this.state.text);
     let url = `https://api.deezer.com/search?q=track:"${
       this.state.text
     }"&limit=20&order=RANKING?strict=on`;
 
     const cached = this._autocompleteCache[url];
     if (cached) {
-      return Promise.resolve(cached).then(results => {
-        this.setState({ results: data.data, showLogo: false });
-      });
+      this.setState({ results: cached, showLogo: false });
+      return;
     }
 
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        this._autocompleteCache[url] = data;
+        this._autocompleteCache[url] = data.data;
         this.setState({ results: data.data, showLogo: false });
       });
   };
