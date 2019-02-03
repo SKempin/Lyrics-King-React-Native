@@ -13,7 +13,7 @@ branches:
 language: node_js
 
 node_js:
-  - "7"
+  - "11.2.0"
 
 cache:
   directories:
