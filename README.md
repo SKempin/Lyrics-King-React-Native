@@ -132,7 +132,7 @@ Due to time constraints there are several features that I haven’t been able to
 - [ ] [Debouncing or throttling](https://www.peterbe.com/plog/how-to-throttle-and-debounce-an-autocomplete-input-in-react) on search functionality.
 - [ ] Adding clear search button functionality on Android. This functionality [already exists on iOS](https://facebook.github.io/react-native/docs/textinput#clearbuttonmode).
 - [ ] [Animations](https://docs.expo.io/versions/latest/react-native/animations) would be a nice touch! Fading in the details screen background image would be priority.
-- [ ] [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html) on components.
+- [x] [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html) on components.
 - [ ] Any general performance improvements.
 
 Other contributions and suggestions are always very welcome! [Contact me](https://www.stephenkempin.co.uk) if you wish to discuss anything.
