@@ -15,7 +15,6 @@ import PropTypes from 'prop-types';
 import { EvilIcons } from '@expo/vector-icons';
 /* eslint-enable import/no-extraneous-dependencies */
 import { Analytics, ScreenHit } from 'expo-analytics';
-
 // search throlle and debounce
 import { throttle, debounce } from 'throttle-debounce';
 
@@ -54,7 +53,7 @@ export default class SearchScreen extends React.Component {
     this.state = { results: [], text: null, showLogo: true };
     this.throttleSearch = throttle(500, this.getInfo);
     this.debounceSearch = debounce(1000, this.getInfo);
-    this.cache = {};
+    this.cache = {}; // caching autocomplete results
   }
 
   componentDidMount() {
@@ -130,9 +129,7 @@ export default class SearchScreen extends React.Component {
 
                 <TextInput
                   style={styles.TextInput}
-                  onChangeText={changedText =>
-                    this.setState({ text: changedText })
-                  }
+                  onChangeText={changedText => this.setState({ text: changedText })}
                   value={text}
                   placeholder="Search song"
                   placeholderTextColor="#fff"
