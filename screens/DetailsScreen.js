@@ -5,7 +5,7 @@ import {
   Image,
   View,
   ScrollView,
-  ImageBackground,
+  ImageBackground
 } from 'react-native';
 import * as Expo from 'expo';
 import PropTypes from 'prop-types';
@@ -24,7 +24,7 @@ const analytics = new Analytics(ID);
 export default class DetailsScreen extends React.Component {
   static get propTypes() {
     return {
-      navigation: PropTypes.object.isRequired,
+      navigation: PropTypes.object.isRequired
     };
   }
 
@@ -37,13 +37,13 @@ export default class DetailsScreen extends React.Component {
     const {
       navigation: {
         state: {
-          params: { title, artist },
-        },
-      },
+          params: { title, artist }
+        }
+      }
     } = this.props;
     Expo.Amplitude.logEvent(`SCREEN - Details: ${title} by ${artist.name}`);
     analytics.hit(
-      new ScreenHit(`SCREEN - Details: ${title} by ${artist.name}`),
+      new ScreenHit(`SCREEN - Details: ${title} by ${artist.name}`)
     );
 
     const lyricsQuery = `${artist.name}/${title}`;
@@ -90,10 +90,10 @@ export default class DetailsScreen extends React.Component {
       navigation: {
         state: {
           params: {
-            title, artist, album, duration,
-          },
-        },
-      },
+            title, artist, album, duration
+          }
+        }
+      }
     } = this.props;
 
     return (
@@ -113,7 +113,7 @@ export default class DetailsScreen extends React.Component {
                 flexDirection: 'column',
                 alignSelf: 'flex-end',
                 paddingBottom: 40,
-                paddingLeft: 19,
+                paddingLeft: 19
               }}
             >
               <Text style={styles.artistHeading}>{artist.name}</Text>
@@ -127,7 +127,7 @@ export default class DetailsScreen extends React.Component {
               flex: 1,
               flexDirection: 'row',
               justifyContent: 'flex-start',
-              marginBottom: 30,
+              marginBottom: 30
             }}
           >
             <Image
@@ -139,7 +139,7 @@ export default class DetailsScreen extends React.Component {
                 flexDirection: 'column',
                 flex: 1,
                 alignSelf: 'center',
-                paddingRight: 10,
+                paddingRight: 10
               }}
             >
               <Text style={styles.detailsHeading}>Album</Text>
@@ -162,7 +162,7 @@ export default class DetailsScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colours.primaryBlack,
-    flex: 1,
+    flex: 1
   },
   backgroundImage: { flex: 1, minHeight: 360, flexDirection: 'row' },
   gradient: {
@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
     top: 0,
     bottom: 0,
     left: 0,
-    right: 0,
+    right: 0
   },
   artistHeading: {
     color: colours.primaryWhite,
@@ -183,8 +183,8 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
     shadowOffset: {
       height: 0,
-      width: 0,
-    },
+      width: 0
+    }
   },
   songHeading: {
     color: colours.primaryWhite,
@@ -197,8 +197,8 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
     shadowOffset: {
       height: 0,
-      width: 0,
-    },
+      width: 0
+    }
   },
   albumImage: {
     width: 130,
@@ -206,24 +206,24 @@ const styles = StyleSheet.create({
     borderRadius: 130 / 2,
     borderWidth: 3,
     borderColor: colours.primaryWhite,
-    marginRight: 25,
+    marginRight: 25
   },
   detailsHeading: { color: colours.primaryGrey, marginBottom: 3 },
   details: {
     color: colours.primaryWhite,
     fontWeight: 'bold',
     marginBottom: 15,
-    fontSize: 16,
+    fontSize: 16
   },
   lyrics: {
     color: colours.primaryWhite,
     lineHeight: 22,
-    paddingBottom: 20,
+    paddingBottom: 20
   },
   creditsContainer: {
     flex: 1,
     alignSelf: 'center',
     paddingTop: 40,
-    paddingBottom: 30,
-  },
+    paddingBottom: 30
+  }
 });

@@ -4,7 +4,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   Linking,
-  Image,
+  Image
 } from 'react-native';
 import Proptypes from 'prop-types';
 import * as Expo from 'expo';
@@ -25,7 +25,7 @@ const Credits = props => (
     onPress={() => Linking.openURL(portfolio).then(() => {
       Expo.Amplitude.logEvent(`BUTTON: Credits - ${props.screen} Screen`);
       analytics.event(
-        new Event('Button', 'Tap', `Credits - ${props.screen} Screen`),
+        new Event('Button', 'Tap', `Credits - ${props.screen} Screen`)
       );
     })
     }
@@ -41,7 +41,7 @@ by Stephen Kempin
 );
 
 Credits.propTypes = {
-  screen: Proptypes.string.isRequired,
+  screen: Proptypes.string.isRequired
 };
 
 export default Credits;
@@ -50,18 +50,18 @@ export default Credits;
 const styles = StyleSheet.create({
   creditsContainer: {
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   creditsText: {
     fontSize: 12,
     color: colours.secondaryGrey,
     textAlign: 'left',
-    paddingLeft: 20,
+    paddingLeft: 20
   },
   creditsImage: {
     width: 30,
     height: 30,
     opacity: 0.2,
-    alignSelf: 'flex-start',
-  },
+    alignSelf: 'flex-start'
+  }
 });

@@ -4,7 +4,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   Linking,
-  Image,
+  Image
 } from 'react-native';
 import * as Expo from 'expo';
 import PropTypes from 'prop-types';
@@ -25,7 +25,7 @@ const ID = Expo.Constants.manifest.extra.googleAnalytics;
 const analytics = new Analytics(ID);
 
 const SocialButton = ({
-  label, url, screen, icon,
+  label, url, screen, icon
 }) => (
   <TouchableOpacity
     style={styles.button}
@@ -38,7 +38,7 @@ const SocialButton = ({
         `Check out ${extra.appName} on Expo today!`,
         `${extra.social.expoApp}`,
         `${extra.appName}`,
-        `${screen}`,
+        `${screen}`
       ))
     }
   >
@@ -56,12 +56,12 @@ SocialButton.propTypes = {
   icon: PropTypes.string,
   label: PropTypes.string.isRequired,
   url: PropTypes.string,
-  screen: PropTypes.string.isRequired,
+  screen: PropTypes.string.isRequired
 };
 
 SocialButton.defaultProps = {
   icon: '',
-  url: '',
+  url: ''
 };
 
 export default SocialButton;
@@ -76,25 +76,25 @@ const styles = StyleSheet.create({
     flexWrap: 'nowrap',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    marginBottom: 10,
+    marginBottom: 10
   },
   icon_left: {
     marginRight: 15,
-    color: colours.primaryGrey,
+    color: colours.primaryGrey
   },
   icon_sk: {
     marginRight: 15,
     opacity: 0.5,
     width: 22,
-    height: 22,
+    height: 22
   },
   label: {
     flex: 1,
-    color: colours.primaryGrey,
+    color: colours.primaryGrey
   },
   icon_right: {
     color: colours.primaryGrey,
     justifyContent: 'flex-end',
-    opacity: 0.4,
-  },
+    opacity: 0.4
+  }
 });

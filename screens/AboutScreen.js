@@ -6,7 +6,7 @@ import {
   ScrollView,
   Image,
   SafeAreaView,
-  StatusBar,
+  StatusBar
 } from 'react-native';
 import * as Expo from 'expo';
 // Config
@@ -97,7 +97,7 @@ export default class AboutScreen extends React.Component {
 const styles = StyleSheet.create({
   safeView: {
     flex: 1,
-    backgroundColor: colours.primaryBlack,
+    backgroundColor: colours.primaryBlack
   },
   container: {
     flex: 1,
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     paddingLeft: 30,
     paddingRight: 30,
-    paddingTop: 40,
+    paddingTop: 40
   },
 
   headingText: {
@@ -113,24 +113,24 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginBottom: 20,
     marginTop: 30,
-    fontWeight: '300',
+    fontWeight: '300'
   },
   detailsContainer: {
-    paddingBottom: 20,
+    paddingBottom: 20
   },
   detailsContainerText: {
     color: colours.primaryGrey,
     fontSize: 12,
-    paddingBottom: 6,
+    paddingBottom: 6
   },
   heading: {
     paddingTop: 50,
     paddingBottom: 15,
-    backgroundColor: colours.primaryBlack,
+    backgroundColor: colours.primaryBlack
   },
   logo: {
     width: 76,
     height: 76,
-    marginBottom: 20,
-  },
+    marginBottom: 20
+  }
 });

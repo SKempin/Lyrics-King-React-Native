@@ -7,7 +7,7 @@ import {
   Keyboard,
   SafeAreaView,
   StatusBar,
-  TouchableWithoutFeedback,
+  TouchableWithoutFeedback
 } from 'react-native';
 import * as Expo from 'expo';
 import PropTypes from 'prop-types';
@@ -42,7 +42,7 @@ const analytics = new Analytics(ID);
 export default class SearchScreen extends React.Component {
   static get propTypes() {
     return {
-      navigation: PropTypes.object.isRequired,
+      navigation: PropTypes.object.isRequired
     };
   }
 
@@ -92,7 +92,7 @@ export default class SearchScreen extends React.Component {
 
   render() {
     const {
-      isReady, showLogo, text, results,
+      isReady, showLogo, text, results
     } = this.state;
     const { navigation } = this.props;
     if (!isReady) {
@@ -146,7 +146,7 @@ export default class SearchScreen extends React.Component {
 const styles = StyleSheet.create({
   safeView: {
     flex: 1,
-    backgroundColor: colours.primaryBlack,
+    backgroundColor: colours.primaryBlack
   },
   container: {
     flex: 1,
@@ -154,13 +154,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: 40,
-    paddingBottom: 30,
+    paddingBottom: 30
   },
   logo: {
     width: 160,
     height: 160,
     marginBottom: 60,
-    marginTop: 40,
+    marginTop: 40
   },
   searchContainer: {
     flexDirection: 'row',
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     backgroundColor: colours.highlightBlack,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   TextInput: {
     flex: 1,
@@ -181,28 +181,28 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     alignItems: 'center',
     flexWrap: 'nowrap',
-    color: colours.primaryWhite,
+    color: colours.primaryWhite
   },
   Suggestions: {
     flex: 1,
     alignItems: 'center',
 
-    color: colours.primaryWhite,
+    color: colours.primaryWhite
   },
   creditsContainer: {
     flexDirection: 'row',
-    width: 170,
+    width: 170
   },
   creditsText: {
     fontSize: 12,
     color: colours.secondaryGrey,
     textAlign: 'left',
-    paddingLeft: 20,
+    paddingLeft: 20
   },
   creditsImage: {
     width: 30,
     height: 30,
     opacity: 0.2,
-    alignSelf: 'flex-start',
-  },
+    alignSelf: 'flex-start'
+  }
 });

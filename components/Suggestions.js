@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   Keyboard,
   StyleSheet,
-  View,
+  View
 } from 'react-native';
 import PropTypes from 'prop-types';
 /* eslint-disable import/no-extraneous-dependencies */
@@ -49,7 +49,7 @@ const Suggestions = ({ results, navigation }) => (
 
 Suggestions.propTypes = {
   results: PropTypes.array.isRequired,
-  navigation: PropTypes.object.isRequired,
+  navigation: PropTypes.object.isRequired
 };
 
 export default Suggestions;
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     marginLeft: 14,
     marginRight: 14,
     marginTop: 0,
-    marginBottom: 10,
+    marginBottom: 10
   },
   image: {
     width: 66,
@@ -81,18 +81,18 @@ const styles = StyleSheet.create({
     borderColor: colours.primaryWhite,
     borderWidth: 2,
     marginRight: 17,
-    flex: 0,
+    flex: 0
   },
   detailsContainer: {
     width: 145,
-    marginRight: 20,
+    marginRight: 20
   },
   songTitle: {
     color: 'white',
-    paddingBottom: 2,
+    paddingBottom: 2
   },
   artistDetails: {
     color: colours.primaryGrey,
-    paddingBottom: 2,
-  },
+    paddingBottom: 2
+  }
 });

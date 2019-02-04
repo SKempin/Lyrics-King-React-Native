@@ -11,13 +11,13 @@ const handleShare = (message, url, title, screen) => {
     {
       message,
       url,
-      title,
+      title
     },
     {
       // Android only:
       dialogTitle: `Share ${title}`, // iOS only:
-      excludedActivityTypes: ['com.apple.UIKit.activity.PostToTwitter'],
-    },
+      excludedActivityTypes: ['com.apple.UIKit.activity.PostToTwitter']
+    }
   ).then(() => {
     Expo.Amplitude.logEvent(`BUTTON: Share - ${screen} Screen`);
     analytics.event(new Event('Button', 'Tap', `Share - ${screen} Screen`));
