@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   StyleSheet,
   TextInput,
@@ -8,25 +8,30 @@ import {
   SafeAreaView,
   StatusBar,
   TouchableWithoutFeedback
-} from "react-native";
-import { AppLoading, Asset, Amplitude } from "expo";
-import { EvilIcons } from "@expo/vector-icons";
-import { Analytics, ScreenHit } from "expo-analytics";
+} from 'react-native';
+import * as Expo from 'expo';
+import PropTypes from 'prop-types';
+/* eslint-disable import/no-extraneous-dependencies */
+import { EvilIcons } from '@expo/vector-icons';
+/* eslint-enable import/no-extraneous-dependencies */
+import { Analytics, ScreenHit } from 'expo-analytics';
+
+import LK_LOGO from '../assets/images/lk-logo.png';
+import SK from '../assets/images/SK.png';
 
 // Config
-import colours from "../config/colours";
+import colours from '../config/colours';
 //  Components
-import Suggestions from "../components/Suggestions";
-import Credits from "../components/Credits";
+import Suggestions from '../components/Suggestions';
+import Credits from '../components/Credits';
 
 // Cache images
 function cacheImages(images) {
-  return images.map(image => {
-    if (typeof image === "string") {
+  return images.map((image) => {
+    if (typeof image === 'string') {
       return Image.prefetch(image);
-    } else {
-      return Asset.fromModule(image).downloadAsync();
     }
+    return Expo.Asset.fromModule(image).downloadAsync();
   });
 }
 
@@ -35,20 +40,27 @@ const ID = Expo.Constants.manifest.extra.googleAnalytics;
 const analytics = new Analytics(ID);
 
 export default class SearchScreen extends React.Component {
+  static get propTypes() {
+    return {
+      navigation: PropTypes.object.isRequired
+    };
+  }
+
   constructor(props) {
     super(props);
     this.state = { results: [], text: null, showLogo: true };
   }
 
   componentDidMount() {
-    Amplitude.initialize("6460727d017e832e2083e13916c7c9e5");
-    Amplitude.logEvent("SCREEN: Search");
-    analytics.hit(new ScreenHit("SCREEN: Search"));
+    Expo.Amplitude.initialize('6460727d017e832e2083e13916c7c9e5');
+    Expo.Amplitude.logEvent('SCREEN: Search');
+    analytics.hit(new ScreenHit('SCREEN: Search'));
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (this.state.text !== prevState.text) {
-      if (this.state.text.length >= 1) {
+    const { text } = this.state;
+    if (text !== prevState.text) {
+      if (text.length >= 1) {
         this.getInfo();
       } else {
         this.submitAndClear();
@@ -57,35 +69,35 @@ export default class SearchScreen extends React.Component {
   }
 
   // Load logos
-  async _loadAssetsAsync() {
-    const imageAssets = cacheImages([
-      require("../assets/images/lk-logo.png"),
-      require("../assets/images/SK.png")
-    ]);
+  _loadAssetsAsync = async () => {
+    const imageAssets = cacheImages([LK_LOGO, SK]);
     await Promise.all([...imageAssets]);
-  }
+  };
 
   // Throttling and debouncing needed
   getInfo = () => {
-    let url = `https://api.deezer.com/search?q=track:"${
-      this.state.text
-    }"&limit=20&order=RANKING?strict=on`;
+    const { text } = this.state;
+    const url = `https://api.deezer.com/search?q=track:"${text}"&limit=20&order=RANKING?strict=on`;
     fetch(url)
       .then(response => response.json())
-      .then(data => {
+      .then((data) => {
         this.setState({ results: data.data, showLogo: false });
       });
   };
 
   submitAndClear = () => {
-    this.setState({ text: "", showLogo: true });
-    Keyboard.dismiss;
+    this.setState({ text: '', showLogo: true });
+    Keyboard.dismiss();
   };
 
   render() {
-    if (!this.state.isReady) {
+    const {
+      isReady, showLogo, text, results
+    } = this.state;
+    const { navigation } = this.props;
+    if (!isReady) {
       return (
-        <AppLoading
+        <Expo.AppLoading
           startAsync={this._loadAssetsAsync}
           onFinish={() => this.setState({ isReady: true })}
           onError={console.warn}
@@ -97,36 +109,32 @@ export default class SearchScreen extends React.Component {
         <StatusBar barStyle="light-content" />
         <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
           <View style={styles.container}>
-            {this.state.showLogo && (
-              <Image
-                style={styles.logo}
-                source={require("../assets/images/lk-logo.png")}
-              />
-            )}
+            {showLogo && <Image style={styles.logo} source={LK_LOGO} />}
 
-            <View style={{ flex: 1, alignItems: "center" }}>
+            <View style={{ flex: 1, alignItems: 'center' }}>
               <View style={styles.searchContainer}>
                 <EvilIcons name="search" size={30} color="#07CCBA" />
 
                 <TextInput
                   style={styles.TextInput}
-                  onChangeText={text => this.setState({ text })}
-                  value={this.state.text}
-                  placeholder={"Search song"}
-                  placeholderTextColor={"#fff"}
-                  clearButtonMode={"always"}
+                  onChangeText={changedText => this.setState({ text: changedText })
+                  }
+                  value={text}
+                  placeholder="Search song"
+                  placeholderTextColor="#fff"
+                  clearButtonMode="always"
                 />
               </View>
 
-              {this.state.results.length > 0 && this.state.text.length > 0 && (
+              {results.length > 0 && text.length > 0 && (
                 <Suggestions
                   style={styles.Suggestions}
-                  results={this.state.results}
-                  navigation={this.props.navigation}
+                  results={results}
+                  navigation={navigation}
                 />
               )}
             </View>
-            {this.state.showLogo && <Credits screen="Search" />}
+            {showLogo && <Credits screen="Search" />}
           </View>
         </TouchableWithoutFeedback>
       </SafeAreaView>
@@ -143,8 +151,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colours.primaryBlack,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     paddingTop: 40,
     paddingBottom: 30
   },
@@ -155,8 +163,8 @@ const styles = StyleSheet.create({
     marginTop: 40
   },
   searchContainer: {
-    flexDirection: "row",
-    flexWrap: "nowrap",
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
     width: 280,
     paddingTop: 18,
     paddingBottom: 18,
@@ -164,37 +172,37 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     marginBottom: 20,
     backgroundColor: colours.highlightBlack,
-    alignItems: "center",
-    justifyContent: "center"
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   TextInput: {
     flex: 1,
     fontSize: 16,
-    textAlign: "center",
-    alignItems: "center",
-    flexWrap: "nowrap",
+    textAlign: 'center',
+    alignItems: 'center',
+    flexWrap: 'nowrap',
     color: colours.primaryWhite
   },
   Suggestions: {
     flex: 1,
-    alignItems: "center",
+    alignItems: 'center',
 
     color: colours.primaryWhite
   },
   creditsContainer: {
-    flexDirection: "row",
+    flexDirection: 'row',
     width: 170
   },
   creditsText: {
     fontSize: 12,
     color: colours.secondaryGrey,
-    textAlign: "left",
+    textAlign: 'left',
     paddingLeft: 20
   },
   creditsImage: {
     width: 30,
     height: 30,
     opacity: 0.2,
-    alignSelf: "flex-start"
+    alignSelf: 'flex-start'
   }
 });
