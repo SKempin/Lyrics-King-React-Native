@@ -6,6 +6,7 @@
     "slug": "lyrics-king",
     "sdkVersion": "32.0.0",
     "platforms": ["ios", "android"],
+    "githubUrl":"https://github.com/SKempin/Lyrics-King-React-Native",
     "orientation": "portrait",
     "privacy": "public",
     "primaryColor": "#07CCBA",

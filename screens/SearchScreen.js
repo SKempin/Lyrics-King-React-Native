@@ -41,7 +41,7 @@ export default class SearchScreen extends React.Component {
     this.state = { results: [], text: null, showLogo: true };
     this.throttleSearch = throttle(500, this.getInfo);
     this.debounceSearch = debounce(1000, this.getInfo);
-    this._autocompleteCache = {};
+    this.cache = {};
   }
 
   componentDidMount() {
@@ -76,16 +76,16 @@ export default class SearchScreen extends React.Component {
       this.state.text
     }"&limit=20&order=RANKING?strict=on`;
 
-    const cached = this._autocompleteCache[url];
+    const cached = this.cache[url];
     if (cached) {
-      this.setState({ results: cached, showLogo: false });
+      this.setState({ results: cached, showLogo: false }); // Do we need to return a promise instead ?
       return;
     }
 
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        this._autocompleteCache[url] = data.data;
+        this.cache[url] = data.data;
         this.setState({ results: data.data, showLogo: false });
       });
   };
