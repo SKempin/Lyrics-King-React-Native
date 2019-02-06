@@ -15,6 +15,8 @@ import PropTypes from 'prop-types';
 import { EvilIcons } from '@expo/vector-icons';
 /* eslint-enable import/no-extraneous-dependencies */
 import { Analytics, ScreenHit } from 'expo-analytics';
+// search throlle and debounce
+import { throttle, debounce } from 'throttle-debounce';
 
 import LK_LOGO from '../assets/images/lk-logo.png';
 import SK from '../assets/images/SK.png';
@@ -49,6 +51,9 @@ export default class SearchScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = { results: [], text: null, showLogo: true };
+    this.throttleSearch = throttle(500, this.getInfo);
+    this.debounceSearch = debounce(1000, this.getInfo);
+    this.cache = {}; // caching autocomplete results
   }
 
   componentDidMount() {
@@ -61,7 +66,8 @@ export default class SearchScreen extends React.Component {
     const { text } = this.state;
     if (text !== prevState.text) {
       if (text.length >= 1) {
-        this.getInfo();
+        if (text.length < 5 || text.endsWith(' ')) this.throttleSearch(text);
+        else this.debounceSearch(text);
       } else {
         this.submitAndClear();
       }
@@ -74,13 +80,20 @@ export default class SearchScreen extends React.Component {
     await Promise.all([...imageAssets]);
   };
 
-  // Throttling and debouncing needed
   getInfo = () => {
     const { text } = this.state;
     const url = `https://api.deezer.com/search?q=track:"${text}"&limit=20&order=RANKING?strict=on`;
+
+    const cached = this.cache[url];
+    if (cached) {
+      this.setState({ results: cached, showLogo: false });
+      return;
+    }
+
     fetch(url)
       .then(response => response.json())
       .then((data) => {
+        this.cache[url] = data.data;
         this.setState({ results: data.data, showLogo: false });
       });
   };
