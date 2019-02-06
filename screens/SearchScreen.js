@@ -29,7 +29,7 @@ import Credits from '../components/Credits';
 
 // Cache images
 function cacheImages(images) {
-  return images.map(image => {
+  return images.map((image) => {
     if (typeof image === 'string') {
       return Image.prefetch(image);
     }
@@ -104,7 +104,9 @@ export default class SearchScreen extends React.Component {
   };
 
   render() {
-    const { isReady, showLogo, text, results } = this.state;
+    const {
+      isReady, showLogo, text, results
+    } = this.state;
     const { navigation } = this.props;
     if (!isReady) {
       return (
