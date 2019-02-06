@@ -29,7 +29,7 @@ import Credits from '../components/Credits';
 
 // Cache images
 function cacheImages(images) {
-  return images.map((image) => {
+  return images.map(image => {
     if (typeof image === 'string') {
       return Image.prefetch(image);
     }
@@ -104,9 +104,7 @@ export default class SearchScreen extends React.Component {
   };
 
   render() {
-    const {
-      isReady, showLogo, text, results
-    } = this.state;
+    const { isReady, showLogo, text, results } = this.state;
     const { navigation } = this.props;
     if (!isReady) {
       return (
@@ -130,8 +128,7 @@ export default class SearchScreen extends React.Component {
 
                 <TextInput
                   style={styles.TextInput}
-                  onChangeText={changedText => this.setState({ text: changedText })
-                  }
+                  onChangeText={changedText => this.setState({ text: changedText })}
                   value={text}
                   placeholder="Search song"
                   placeholderTextColor="#fff"
