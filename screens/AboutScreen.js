@@ -36,7 +36,9 @@ export default class AboutScreen extends React.Component {
         <StatusBar barStyle="light-content" />
         <ScrollView style={styles.container}>
           <View style={{ flex: 1 }}>
-            <Text style={styles.headingText}>Social</Text>
+            <Text style={styles.headingText}>
+Social
+            </Text>
 
             {socialLinks.map((socialLink, index) => (
               <SocialButton
@@ -48,10 +50,14 @@ export default class AboutScreen extends React.Component {
               />
             ))}
 
-            <Text style={styles.headingText}>Share</Text>
+            <Text style={styles.headingText}>
+Share
+            </Text>
             <SocialButton icon="share" label="Share" screen="About" />
 
-            <Text style={styles.headingText}>Donate</Text>
+            <Text style={styles.headingText}>
+Donate
+            </Text>
             <SocialButton
               icon="heart"
               label="Buy me a coffee to say thanks!"
@@ -59,7 +65,9 @@ export default class AboutScreen extends React.Component {
               screen="About Screen"
             />
 
-            <Text style={styles.headingText}>App Info</Text>
+            <Text style={styles.headingText}>
+App Info
+            </Text>
             <Image style={styles.logo} source={SK_LOGO} />
             <View style={styles.detailsContainer}>
               <Text style={styles.detailsContainerText}>

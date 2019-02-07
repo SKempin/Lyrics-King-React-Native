@@ -47,7 +47,9 @@ const SocialButton = ({
     ) : (
       <Image source={SK} style={styles.icon_sk} />
     )}
-    <Text style={styles.label}>{label}</Text>
+    <Text style={styles.label}>
+      {label}
+    </Text>
     <EvilIcons name="chevron-right" size={34} style={styles.icon_right} />
   </TouchableOpacity>
 );

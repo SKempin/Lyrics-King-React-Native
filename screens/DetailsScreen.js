@@ -80,7 +80,9 @@ export default class DetailsScreen extends React.Component {
         firstLineWidth="30%"
         onReady={isReady}
       >
-        <Text style={styles.lyrics}>{lyrics}</Text>
+        <Text style={styles.lyrics}>
+          {lyrics}
+        </Text>
       </Placeholder.Paragraph>
     );
   }
@@ -116,8 +118,12 @@ export default class DetailsScreen extends React.Component {
                 paddingLeft: 19
               }}
             >
-              <Text style={styles.artistHeading}>{artist.name}</Text>
-              <Text style={styles.songHeading}>{title}</Text>
+              <Text style={styles.artistHeading}>
+                {artist.name}
+              </Text>
+              <Text style={styles.songHeading}>
+                {title}
+              </Text>
             </View>
           </ImageBackground>
         </View>
@@ -142,10 +148,18 @@ export default class DetailsScreen extends React.Component {
                 paddingRight: 10
               }}
             >
-              <Text style={styles.detailsHeading}>Album</Text>
-              <Text style={styles.details}>{album.title}</Text>
-              <Text style={styles.detailsHeading}>Duration</Text>
-              <Text style={styles.details}>{format(duration * 1000)}</Text>
+              <Text style={styles.detailsHeading}>
+Album
+              </Text>
+              <Text style={styles.details}>
+                {album.title}
+              </Text>
+              <Text style={styles.detailsHeading}>
+Duration
+              </Text>
+              <Text style={styles.details}>
+                {format(duration * 1000)}
+              </Text>
             </View>
           </View>
           {this.displayLyrics()}
