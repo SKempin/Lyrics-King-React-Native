@@ -4,6 +4,8 @@
 ![](https://img.shields.io/github/stars/SKempin/Lyrics-King-React-Native.svg?style=flat-square)
 ![](https://img.shields.io/github/forks/SKempin/Lyrics-King-React-Native.svg?style=flat-square)
 [![Build Status](https://travis-ci.org/SKempin/Lyrics-King-React-Native.svg?branch=master)](https://travis-ci.org/SKempin/Lyrics-King-React-Native)
+[![Mentioned in Awesome Expo](https://awesome.re/mentioned-badge.svg)](https://github.com/expo/awesome-expo)
+
 
 A [React Native](https://facebook.github.io/react-native/) native app utilising [Expo](https://expo.io/), [React Navigation](https://reactnavigation.org) and fetching data from multiple API's ([Deezer](https://developers.deezer.com/) and [Lyrics.OVH](https://www.lyrics.ovh)). UI built with [Adobe XD](https://www.adobe.com/uk/products/xd.html).
 <br><br>
@@ -15,18 +17,31 @@ Built as a personal training project for [React Native](https://facebook.github.
 
 ## Contents
 
-- [App Preview](#app-preview)
-- [Expo Project Page](#expo-project-page)
-- [Adobe XD](#adobe-xd-files)
-- [App Features](#app-features)
-- [Getting Started](#getting-started)
-- [What's Included](#whats-included)
-- [API's](#apis-used)
-- [Contributing](#contributing)
-- [Author](#author)
-- [Google Play Store](#google-play-store)
-- [Donate](#donate)
-- [License](#license)
+- [Lyrics King <img src="_github/lk-logo.gif" width="80">](#lyrics-king-img-src%22githublk-logogif%22-width%2280%22)
+		- [Expo Demo Link](#expo-demo-link)
+	- [Contents](#contents)
+	- [App Preview](#app-preview)
+		- [Video Preview](#video-preview)
+		- [Search Screen](#search-screen)
+		- [Details Screen](#details-screen)
+		- [About Screen](#about-screen)
+		- [Navigation (Drawer)](#navigation-drawer)
+	- [Expo Project Page](#expo-project-page)
+	- [Adobe XD files](#adobe-xd-files)
+	- [App Features](#app-features)
+		- [Screens](#screens)
+		- [Components](#components)
+		- [Config](#config)
+		- [Lib](#lib)
+		- [Utils](#utils)
+	- [Getting Started](#getting-started)
+	- [What's Included](#whats-included)
+	- [API's Used](#apis-used)
+	- [Contributing](#contributing)
+	- [Author](#author)
+	- [Google Play Store](#google-play-store)
+	- [Donate](#donate)
+	- [License](#license)
 
 
 ## App Preview
