@@ -50,8 +50,8 @@ export default class DetailsScreen extends React.Component {
     this.getLyrics(lyricsQuery);
   }
 
-  //fix issue #5 - setting state on unmounted component
-  componentWillUnmount(){
+  // fix issue #5 - setting state on unmounted component
+  componentWillUnmount() {
     this.isCancelled = true;
   }
 
@@ -59,7 +59,7 @@ export default class DetailsScreen extends React.Component {
     try {
       const res = await fetch(`https://api.lyrics.ovh/v1/${lyricsQuery}`);
       const response = await res.json();
-      !this.isCancelled && this.setState({ lyrics: response.lyrics, isReady: true });
+      if (!this.isCancelled) this.setState({ lyrics: response.lyrics, isReady: true });
     } catch (e) {
       console.log(e); // this.setState({ err: e.message });
     }
