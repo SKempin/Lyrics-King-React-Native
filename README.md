@@ -118,11 +118,12 @@ Design files for the UI can be found in `_design_assets/adobeXD` in the project 
 
 ## Getting Started
 
-1. Install the latest Node
+1. Install the latest Node (https://nodejs.org/en)
 2. Install [Expo](https://expo.io/) - `npm install expo-cli --global`
+   This can be done within your device's terminal after installing Node
 3. `cd` into this project directory
-4. `npm install` or `yarn install`
-5. Run `expo start`
+4. `npm install` or `yarn install` (As a future developer, steps 4 and 5 are unclear to me. I wouldn't know what to do, therefore more precise instructions should be placed here. If I am unaware of what futher instructions to add here, then it should be an issue to be fixed.)
+5. Run `expo start` 
 
 ## What's Included
 
